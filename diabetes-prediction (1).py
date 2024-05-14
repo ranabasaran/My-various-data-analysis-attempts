@@ -29,7 +29,7 @@ plt.legend()
 plt.show()
 
 
-# In[7]:
+# In[3]:
 
 
 y = data.Outcome.values 
@@ -46,7 +46,7 @@ print("\n\n\nNormalizasyon sonrası yapay zekaya eğitimi için verceğimiz veri
 print(x.head())
 
 
-# In[8]:
+# In[4]:
 
 
 #train ve test datamızı ayırıyoruz 
@@ -64,7 +64,7 @@ for k in range(1,11):
     sayac += 1
 
 
-# In[9]:
+# In[5]:
 
 
 #modeli olusturabiliriz
@@ -75,7 +75,7 @@ prediction = knn.predict(x_test)
 print("K = 3 için test verilerimizin doğrulama testi sonucu", knn.score(x_test,y_test))
 
 
-# In[10]:
+# In[6]:
 
 
 # Yeni hasta tahmini
@@ -87,10 +87,6 @@ sc.fit_transform(x_ham_veri)
 
 new_prediction = knn.predict(sc.transform(np.array([[6,148,72,35,0,33.6,0.627,50]])))
 new_prediction[0]
-
-
-# In[ ]:
-
 
 
 
